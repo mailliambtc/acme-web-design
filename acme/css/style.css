@@ -1,0 +1,212 @@
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Global */ 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.dark {
+    padding: 15px; 
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+/* margin and padding are 0 because by default <ul> adds padding */ 
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.button_1 {
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+/* Header where logo and navbar is */ 
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px; 
+    border-bottom: #e8491d 3px solid;
+}
+
+/* this only targets links in the <header> section */ 
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline; 
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+/*This targets the h1 tag only under the branding ID*/
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 20px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/* showcase the -750px brings the image focal point upwards if the image is larger than the container it is in */
+
+#showcase {
+    min-height: 400px;
+    background: url(../images/showcase.jpg) no-repeat 0 -750px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+/* the .. in the background:url part goes out of a folder. We are in the CSS folder, so we have to jump out once, then enter the images folder. */ 
+
+#showcase p {
+    font-size: 20px;
+}
+
+/* Newsletter sign-up container */ 
+
+#newsletter {
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a; 
+}
+
+#newsletter h1 {
+    float: left;
+}
+
+#newsletter form {
+    float: right; 
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"] {
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Boxes with logos on top */ 
+
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    float: left;
+    width: 30%; 
+    padding: 10px;
+    text-align: center;
+}
+
+/* Make a note of how this targets specifially the image within the boxes section and within the .box class */ 
+
+#boxes .box img {
+    width: 50px; 
+}
+
+/* Services 'Get a Quote' */
+
+ul#services li {
+    list-style: none; /* this removes bulletpoints */
+    padding: 20px;
+    border: #cccccc solid 1px;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+
+footer {
+    padding: 20px;
+    margin-top: 20px; 
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center; 
+}
+
+/* Sidebar */
+/* Weird. You have to remove the space between # and aside */ 
+
+aside#sidebar { 
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea {
+    width: 90%;
+    padding: 5px;  
+}
+
+article#main-col {
+    float: left;
+    width: 65%;
+}
+
+/* Media Queries */
+
+@media(max-width: 768px) {
+    header #branding, header nav, header nav li, #newsletter h1, #newsletter form, #boxes .box, article#main-col, aside#sidebar {
+        float: none;
+        text-align: center;
+        width: 100%; 
+    }
+    
+    header {
+        padding-bottom: 20px;
+    }
+    
+    #showcase h1 {
+        margin-top: 40px;
+    }
+    
+    #newsletter button, #newsletter form input[type="email"] {
+        display: block;
+        width: 100%;
+    }
+}
